@@ -11,24 +11,43 @@ var questionText = document.getElementById('questionText');
 var questionRight = 0;
 var question = 0;
 var answer = 0;
+var hidden = document.getElementById("quiz");
+var goBack = document.querySelector("#return");
+var timerWhole = document.querySelector('#timerWhole');
+
+hiddenQuestions();
+function hiddenQuestions() {
+
+    hidden.style.visibility = "hidden"
+    timerWhole.style.visibility = 'hidden'
+}
+
+function shownQuestions() {
+    
+    hidden.style.visibility = "visible"
+    startQuiz.style.visibility = 'hidden'
+    highScore.style.visibility = "hidden"
+    timerWhole.style.visibility = "visible"
+}
+
 
 
 
 startQuiz.addEventListener('click', startGame);
 
 function startGame() {
+    shownQuestions();
+    
     startTimer();
     questionText.textContent = 'Was this easy to code?'
     button1Click.textContent = 'Nope'
     button2Click.textContent = 'No' 
     button3Click.textContent = 'Nein' 
     button4Click.textContent = 'Nada'
-    // Add High Score hider
-    // Add Start Quiz Hider
     button1Click.addEventListener('click', questionOne);
     button2Click.addEventListener('click', questionOne);
     button3Click.addEventListener('click', questionOne);
- 
+
     button4Click.addEventListener('click', questionOne);
     
     
@@ -153,11 +172,12 @@ function questionThree() {
 }
 
 
-
+// End game function, after the endGame function is called, it will stop the timer, hide the questions, ask the user to input initials, and then save the data locally.
 function endGame() {
     
     questionText.textContent = 'Good job! You got ' + questionRight +' questions right!';
     clearInterval(secondsLeft);
+    hiddenQuestions();
 }
 
 

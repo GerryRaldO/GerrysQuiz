@@ -33,3 +33,6 @@ ADDED CRITERIA based on Mock-Up
 High Score Button at the top left of screen.
 The website will tell you if you got the answer correct or incorrect.
 The quiz will have 4 different questions, all with different answers.
+
+
+Live github pages. https://gerryraldo.github.io/GerrysQuiz/
