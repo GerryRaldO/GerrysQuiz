@@ -36,3 +36,7 @@ The quiz will have 4 different questions, all with different answers.
 
 
 Live github pages. https://gerryraldo.github.io/GerrysQuiz/
+Home page ![HomePage.img](./assets/homePage.PNG)
+
+First Question ![FirstQuestion.img](./assets/FirstQuestion.PNG)
+
